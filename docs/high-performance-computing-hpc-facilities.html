@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Haploteam - Bioinformatics best practices</title>
-  <meta name="description" content="Haploteam - Bioinformatics best practices" />
+  <title>Chapter 3 High Performance Computing (HPC) facilities | Haploteam - Bioinformatics best practices</title>
+  <meta name="description" content="Chapter 3 High Performance Computing (HPC) facilities | Haploteam - Bioinformatics best practices" />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Haploteam - Bioinformatics best practices" />
+  <meta property="og:title" content="Chapter 3 High Performance Computing (HPC) facilities | Haploteam - Bioinformatics best practices" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Haploteam - Bioinformatics best practices" />
+  <meta name="twitter:title" content="Chapter 3 High Performance Computing (HPC) facilities | Haploteam - Bioinformatics best practices" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="internet-connection.html"/>
+<link rel="prev" href="internet-connection.html"/>
+<link rel="next" href="best-practices-in-bioinformatics-data-reproducibility.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -106,21 +106,24 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Haploteam - Bioinformatics best practices</h1>
-<p class="date"><em>2023-01-11</em></p>
-</div>
-<div id="introduction" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This tutorial aims to help you settle down in the lab and with the common practices of the lab. Below you have information on how to get your email, literature access, computing facilities, etc. In order to increase data reproducibility we have also added to this tutorial some best practices in bioinformatics. Please go through it carefully and do not hesitate in communicating any issue you may encounter (<a href="mailto:itavaresalves@unistra.fr" class="email">itavaresalves@unistra.fr</a>).</p>
+<div id="high-performance-computing-hpc-facilities" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> High Performance Computing (HPC) facilities<a href="high-performance-computing-hpc-facilities.html#high-performance-computing-hpc-facilities" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The HaploTeam has access to a High Performance Computing cluster:
+<a href="https://tank.ibmp.unistra.fr/tankusers/documentation/blob/master/cluster_presentation.md" class="uri">https://tank.ibmp.unistra.fr/tankusers/documentation/blob/master/cluster_presentation.md</a>.</p>
+<p>If you will perform extensive data analysis consider getting access to it. To ask for access please fill in the following form: <a href="http://www.ibmp.cnrs.fr/contact-b2i/" class="uri">http://www.ibmp.cnrs.fr/contact-b2i/</a>. To avoid any issue using the cluster please read carefully the instructions. Scripts should be launched in the queue system and not on the master node. If you need to use an interactive node to develop your scripts please use the following option:</p>
+<p>srun -p fast -c 1 –mem=4G –pty /bin/bash</p>
+<p>This will assign a node to your job and you can interactively launch your commands.
+Maybe this could go to best practices in bioinformatics</p>
+<p>Files should be made accessible to the whole team using chmod -R 750 yourHomeDirectory</p>
+<p>To transfer files from and to the cluster we suggest using FileZilla (<a href="https://filezilla-project.org/" class="uri">https://filezilla-project.org/</a>).</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="internet-connection.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="internet-connection.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="best-practices-in-bioinformatics-data-reproducibility.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
