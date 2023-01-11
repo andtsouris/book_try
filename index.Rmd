@@ -1,9 +1,63 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAME HERE"
+title: "Haploteam - Bioinformatics best practices"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Down the rabbit-hole
+
+# Introduction
+
+This tutorial aims to help you settle down in the lab and with the common practices of the lab. Below you have information on how to get your email, literature access, computing facilities, etc. In order to increase data reproducibility we have also added to this tutorial some best practices in bioinformatics. Please go through it carefully and do not hesitate in communicating any issue you may encounter (itavaresalves@unistra.fr).
+
+# Internet connection
+## Wifi
+Eduroam: you need an email address of the Unistra or any other University with an Eduroam connection. See email access above. You can find Unistra Eduroam configuration here: https://services-numeriques.unistra.fr/documentations/toutes-les-documentations/services-dinfrastructure-et-reseau/service-wi-fi.html
+
+Osiris-lab: you need to ask to configure your computer to Bruno Partouche (IT) via support-gmgm@unistra.fr. The best is to schedule a meeting with Bruno to set up your computer including adding the VPN access (see below) in case you will use the local cluster. 
+
+## Ethernet 
+You need to ask to configure your computer (no access in case of personal computer) to Bruno Partouche via support-gmgm@unistra.fr. 
+
+## VPN access
+To have access to Unistra network (for instance access to literature) you can install a VPN using the following link: https://services-numeriques.unistra.fr/documentations/toutes-les-documentations/packs-de-documentations/guide-numerique-du-nouvel-arrivant.html
+
+To have access to our local High Performance Computing facilities (see below) from home you must install the GMGM VPN (it’s different from the Unistra VPN). To do so send an email to support-gmgm@unistra.fr. 
+
+
+# High Performance Computing (HPC) facilities
+The HaploTeam has access to a High Performance Computing cluster: 
+https://tank.ibmp.unistra.fr/tankusers/documentation/blob/master/cluster_presentation.md. 
+
+If you will perform extensive data analysis consider getting access to it. To ask for access please fill in the following form: http://www.ibmp.cnrs.fr/contact-b2i/. To avoid any issue using the cluster please read carefully the instructions. Scripts should be launched in the queue system and not on the master node. If you need to use an interactive node to develop your scripts please use the following option: 
+
+srun -p fast -c 1 --mem=4G --pty /bin/bash
+
+This will assign a node to your job and you can interactively launch your commands. 
+Maybe this could go to best practices in bioinformatics
+
+Files should be made accessible to the whole team using chmod -R 750 yourHomeDirectory
+
+To transfer files from and to the cluster we suggest using FileZilla (https://filezilla-project.org/). 
+
+
+# Best practices in bioinformatics (data reproducibility)
+In case one needs to reproduce someone else’s analyses (or even our own analyses after long periods of time) the data and scripts you used should be kept and thoroughly described. You should organize your data in a way that at the end of the project you create a compressed file containing the latest data files and scripts that will then be stored. Keep in mind that someone else must be able to uncompress that file, follow your report/README and obtain the same results. 
+
+The usage of Jupyter notebook for python or R markdown files is encouraged. 
+ 
+## Github 
+Maybe we could add reference files, empty script templates (for the header and to run task in parallel) for babel, etc on the gitlab.
+The website could be hosted on this github account too (or at least linked)
+## Reference files to use:
+
+
+## How to use the cluster:
+
+
+##  sHow to store results: 
+
+
+
+
+
 
